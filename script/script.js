@@ -28,8 +28,8 @@ function open_album() {
 
 //* innerHTML for Photo Preview
 function get_photo_template(index) {
-    let photoNumber = String(index + 1).padStart(2, "0");
-    let name = get_photo_name(photos[index]);
+let photoNumber = String(index + 1).padStart(2, "0");
+let name = get_photo_name(photos[index]);
     return `
         <button class="photo_button"
             onclick="photo_view_dialog(${index + 1})"
