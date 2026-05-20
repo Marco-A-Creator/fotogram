@@ -262,3 +262,51 @@ footer p {
         padding: 0;
     }
 }
+
+@media screen and (max-width: 480px) {
+
+    main {
+        margin: 0 auto;
+        padding: 24px 0;
+        gap: 56px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        max-width: 315px;
+    }
+
+    header div {
+        justify-content: center;
+        padding: 20px 0;
+    }
+
+    .main-dialog_opened[open] {
+        width: 100%;
+        height: 100%;
+        max-width: 100vw;
+        max-height: 100dvh;
+        padding: 32px 16px;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .top-view button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .chosen-photo {
+        height: 100%;
+        max-height: 375px;
+        object-fit: cover;
+        overflow: hidden;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .photo-section {
+        gap: 0.5rem;
+    }
+}
