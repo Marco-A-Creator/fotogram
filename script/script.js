@@ -30,17 +30,14 @@ function open_album() {
 function get_photo_template(index) {
     let photoNumber = String(index + 1).padStart(2, "0");
     let name = get_photo_name(photos[index]);
-
     return `
         <button class="photo_button"
             onclick="photo_view_dialog(${index + 1})"
             aria-label="Foto öffnen: ${name}">
-            
             <img 
                 id="chosen_photo${photoNumber}"
                 src="./assets/img/${photos[index]}"
                 alt="${name}">
-                
         </button>
     `;
 }
@@ -55,7 +52,6 @@ function get_photo_name(fileName) {
         .replace(/oe/g, "ö")
         .replace(/ue/g, "ü")
         .slice(2, 43);
-
     return name;
 }
 
@@ -63,7 +59,6 @@ function get_photo_name(fileName) {
 function show_photo(photo_number) {
     let photoId = String(photo_number).padStart(2, "0");
     let img = document.getElementById("chosen_photo" + photoId);
-
     document.getElementById("chosen-photo").src = img.src;
     document.getElementById("img-number").innerHTML = photoId + "/" + total;
     document.getElementById("photo-name").innerText = get_photo_name(photos[photo_number - 1]);
@@ -74,7 +69,6 @@ function photo_view_dialog(clicked) {
     dialogRef.showModal();
     dialogRef.classList.add("main-dialog_opened");
     document.body.classList.add("no_scroll");
-
     show_photo(clicked);
 }
 
@@ -89,11 +83,9 @@ function close_dialog() {
 function next_photo() {
     let current = document.getElementById("img-number").innerHTML.slice(0, 2);
     let next = parseInt(current) + 1;
-
     if (next > total) {
         next = 1;
     }
-
     show_photo(next);
 }
 
@@ -101,11 +93,9 @@ function next_photo() {
 function previous_photo() {
     let current = document.getElementById("img-number").innerHTML.slice(0, 2);
     let previous = parseInt(current) - 1;
-
     if (previous < 1) {
         previous = total;
     }
-
     show_photo(previous);
 }
 
