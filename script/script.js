@@ -49,11 +49,12 @@ function get_photo_template(index) {
 function get_photo_name(fileName) {
     let name = fileName
         .replace(".jpg", "")
+        .replace(".png", "")
         .replace(/_/g, " ")
         .replace(/ae/g, "ä")
         .replace(/oe/g, "ö")
         .replace(/ue/g, "ü")
-        .slice(3, 43);
+        .slice(2, 43);
 
     return name;
 }
