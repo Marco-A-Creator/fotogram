@@ -5,7 +5,7 @@ const photoIndex = document.getElementById("photo-album");
 const photos = [
     "01snowmountain.jpg",
     "02animecity.jpg",
-    "03stormclouds.png",
+    "03stormclouds.jpg",
     "04birdontree.jpg",
     "05huricane.jpg",
     "06alsosnowemountain.jpg",
@@ -24,6 +24,12 @@ function open_album() {
     for (let i = 0; i < photos.length; i++) {
         photoIndex.innerHTML += get_photo_template(i);
     }
+}
+
+//*stopPropagation
+function logDownWbubblingProtection(event){
+    console.log("logDown");
+    event.stopPropagation(event);
 }
 
 //* innerHTML for Photo Preview

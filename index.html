@@ -31,7 +31,7 @@
 
         </section>
 
-        <dialog id="photo-dialog" class="main-dialog" onmousedown="event.target==this && close_dialog()">
+        <dialog id="photo-dialog" class="main-dialog" onclick="stopPropagation(event)">
             <div class="top-view">
                 <h2 id="photo-name">foto name</h2>
                 <button onclick="close_dialog()" id="close-dialog">❌</button>

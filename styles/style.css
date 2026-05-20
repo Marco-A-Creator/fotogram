@@ -14,10 +14,6 @@ body {
     background-color: var(--main-background-color);
 }
 
-.no_scroll {
-    overflow: hidden;
-}
-
 /** scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -180,6 +176,7 @@ h2 {
 .chosen-photo {
     width: 100%;
     max-width: 560px;
+    max-height: 375px;
     overflow: hidden;
 }
 
@@ -226,7 +223,7 @@ footer {
     gap: 16px;
     border-top-left-radius: 60% 30px;
     border-top-right-radius: 60% 30px;
-    background-color: var(--header-footer-background-color);
+    background-color: var(--header-footer-color);
 }
 
 footer p {
@@ -245,6 +242,12 @@ footer p {
 
     h1 {
         font-size: 3.25rem;
+    }
+}
+
+@media screen and (min-width: 532px) and (max-width: 4000px) {
+    body {
+        overflow: hidden;
     }
 }
 
