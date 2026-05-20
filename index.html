@@ -15,7 +15,7 @@
     <script src="./script/script.js" defer></script>
 </head>
 
-<body>
+<body onload="open_album()">
 
     <header>
         <div>
@@ -31,10 +31,10 @@
 
         </section>
 
-        <dialog id="photo-dialog" class="main-dialog" onmousedown="">
+        <dialog id="photo-dialog" class="main-dialog" onmousedown="event.target==this && close_dialog()">
             <div class="top-view">
                 <h2 id="photo-name">foto name</h2>
-                <button onclick="" id="close-dialog">❌</button>
+                <button onclick="close_dialog()" id="close-dialog">❌</button>
             </div>
 
             <img src="" alt="" id="chosen-photo" class="chosen-photo">
