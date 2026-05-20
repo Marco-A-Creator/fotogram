@@ -46,7 +46,6 @@ function get_photo_template(index) {
 function get_photo_name(fileName) {
     let name = fileName
         .replace(".jpg", "")
-        .replace(".png", "")
         .replace(/_/g, " ")
         .replace(/ae/g, "ä")
         .replace(/oe/g, "ö")
