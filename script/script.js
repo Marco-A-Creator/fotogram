@@ -26,12 +26,6 @@ function open_album() {
     }
 }
 
-//*stopPropagation
-function logDownWbubblingProtection(event){
-    console.log("logDown");
-    event.stopPropagation(event);
-}
-
 //* innerHTML for Photo Preview
 function get_photo_template(index) {
     let photoNumber = String(index + 1).padStart(2, "0");
